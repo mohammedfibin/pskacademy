@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PSK Academy</title>
+     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.php">PSK Academy</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="courses.php">Courses</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<!-- PAGE HEADER -->
+<div class="page-header" >
+    <h1>About PSK Academy</h1>
+    <div class="breadcrumbs mt-2">
+        <a href="index.php">Home</a> <span> / </span> <span>About</span>
+    </div>
+</div>
+
+
+
+<!-- ABOUT CONTENT -->
+<div class="container">
+    <div class="about-card">
+
+        <div class="row gy-4">
+
+            <!-- IMAGE -->
+            <div class="col-lg-6">
+                <img src="img/ChatGPT Image Nov 27, 2025, 01_45_41 PM.png" class="img-fluid about-img" alt="About PSK Academy">
+            </div>
+
+            <!-- TEXT -->
+            <div class="col-lg-6">
+
+                <h2 class="section-title">Who We Are</h2>
+                <p>
+                    Founded in 2025 in Malappuram, Kerala, <strong>PSK Academy (Practical • Skill • Knowledge)</strong>
+                    is committed to shaping confident, capable, and future-ready individuals.
+                </p>
+
+                <p>
+                    We specialise in practical training that strengthens essential skills including
+                    <strong>Personality Development, Public Speaking, and Business Skills.</strong>
+                </p>
+
+                <p>
+                    Our programs focus on real-world application through interactive, activity-based sessions
+                    that help learners communicate effectively, think clearly, and perform with confidence.
+                </p>
+
+                <p>
+                    With a mission to empower individuals with lifelong skills, PSK Academy aims to be
+                    Malappuram’s most trusted destination for personal and professional growth.
+                </p>
+
+                <hr>
+
+               
+            </div>
+        </div>
+        <style>
+        .mission-vision-box {
+    background: #002347;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.mission-vision-box h3 {
+    color: #f5efef;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.mission-vision-box p {
+    font-size: 16px;
+    color: #f5efef;
+    margin: 0;
+}
+
+.section-title {
+    color: #002347;
+    font-weight: 700;
+}
+</style>
+        
+       <hr class="mt-4">
+
+<!-- MISSION & VISION SECTION -->
+<div class="row gy-4 mt-3">
+
+    <!-- MISSION -->
+    <div class="col-lg-6">
+        <div class="mission-vision-box">
+            <h3>Our Mission</h3>
+            <p>
+                To empower individuals with practical communication and life skills
+                through activity-based training.
+            </p>
+        </div>
+    </div>
+
+    <!-- VISION -->
+    <div class="col-lg-6">
+        <div class="mission-vision-box">
+            <h3>Our Vision</h3>
+            <p>
+                To become Kerala’s most trusted academy for personal and professional
+                transformation.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<hr class="mt-4">
+
+
+
+
+        <hr class="mt-4">
+
+        <!-- COURSES -->
+        <h3 class="section-title">Courses / Services</h3>
+
+        <div class="course-box">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Personality Development Workshop
+        </div>
+
+        <div class="course-box">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Business Skills Workshop
+        </div>
+
+        <div class="course-box">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Public Speaking Workshop
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2025 PSK Academy | All Rights Reserved
+    <br>
+    <a href="#">Privacy Policy</a> • <a href="#">Terms & Conditions</a>
+</div>
+
+
+<script>
+document.querySelectorAll('.course-box').forEach(box => {
+
+    box.addEventListener('touchstart', () => {
+        box.classList.add("active-touch");
+        box.style.transform = "translateY(-8px) scale(1.03)";
+        box.style.boxShadow = "0 8px 18px rgba(0,0,0,0.2)";
+    });
+
+    box.addEventListener('touchend', () => {
+        box.classList.remove("active-touch");
+        box.style.transform = "translateY(0)";
+        box.style.boxShadow = "none";
+    });
+
+});
+</script>
+
+
+</body>
+</html>

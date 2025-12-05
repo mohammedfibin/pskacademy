@@ -1,0 +1,110 @@
+body {
+            background: #f1f1f1;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+        
+            background: linear-gradient(135deg, hsl(0, 0%, 5%), #0a2f5a);
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 45px;
+            font-weight: 700;
+        }
+
+        /* BREADCRUMBS */
+        .breadcrumbs a {
+            color: #1E90FF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumbs span {
+            color: white;
+        }
+
+        /* ABOUT CARD */
+        .about-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-top: -50px;
+        }
+
+        /* TITLES */
+        .section-title {
+            font-weight: 700;
+            margin-top: 20px;
+            color: #002147;
+        }
+
+        /* COURSE BOXES */
+        .course-box {
+            background: #6dd3c5;
+            border-left: 5px solid #1E90FF;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+.course-box.active-touch {
+    background: #0861e6 !important;  /* light blue */
+    border-left-color: #0b5ed7 !important; /* darker blue */
+}
+
+
+        /* Hover animation for desktop */
+        .course-box:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+        }
+
+        /* IMAGE STYLE */
+.section-about-img {
+            
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+img {
+    vertical-align: middle;
+    border-style: none
+}
+        
+
+        /* NAVBAR */
+        .navbar {
+            background: #002147 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #0327f3 !important;
+            font-weight: 500;
+        }
+
+        .nav-link.active {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #00152d;
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #2702fc;
+            text-decoration: none;
+        }
