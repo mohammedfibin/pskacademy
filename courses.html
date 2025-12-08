@@ -7,8 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>Courses</title>
+    <link rel="icon" href="img/blog/looooggg.png" type="image/png" />
+    <title>PSK Academy-Courses</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
@@ -20,8 +20,14 @@
   </head>
 
   <body>
+    <div id="header"></div>
+<script>
+    fetch("header.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+</script>
     <!--================ Start Header Menu Area =================-->
-    <header class="header_area white-header">
+   <!-- <header class="header_area white-header">
       <div class="main_menu">
         <div class="search_input" id="search_input_box">
           <div class="container">
@@ -43,9 +49,9 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
+          <div class="container">-->
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand" href="index.html">
+            <!--<a class="navbar-brand" href="index.html">
               <img class="logo-2" src="img/logo2.png" alt="" />
             </a>
             <button
@@ -59,9 +65,9 @@
             >
               <span class="icon-bar"></span> <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button>-->
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div
+           <!--- <div
               class="collapse navbar-collapse offset"
               id="navbarSupportedContent"
             >
@@ -130,7 +136,7 @@
           </div>
         </nav>
       </div>
-    </header>
+    </header>-->
     <!--================ End Header Menu Area =================-->
 
     <!--================Home Banner Area =================-->
@@ -168,7 +174,7 @@
           </div>
         </div>
         <style>
-       .course_content span.tag {
+       .course_content-1 span.tag {
     width: 100%;
     height: 40px;                /* ⭐ Increase height here */
     
@@ -188,134 +194,284 @@
 
     padding: 0 25px;             /* ❗ horizontal padding only */
 }
+</style>
+<style>
+ .course_content-2 span.tag {
+    width: 100%;
+    height: 40px;                /* ⭐ Increase height here */
+    
+    display: flex;
+    
+    text-align: center;         /* center vertically */
 
+    background: #0A0F4D;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 
+    border-radius: 30px;         /* make it a perfect pill */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
 
+    padding: 0 25px;             /* ❗ horizontal padding only */
+}
+</style>
+<style>
+ .course_content-3 span.tag {
+    width: 100%;
+    height: 40px;                /* ⭐ Increase height here */
+    
+    display: flex;
+    
+    text-align: center;         /* center vertically */
 
+    background: #0A0F4D;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 
+    border-radius: 30px;         /* make it a perfect pill */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-transform: uppercase;
 
+    padding: 0 25px;             /* ❗ horizontal padding only */
+}
+</style>
 
+</style>
+<style>
+/* Row spacing */
+.row {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
+/* Course Card */
+.single_course {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease-in-out;
+  height: 100%;
+  padding-bottom: 20px;
+}
+
+/* Hover effect */
+.single_course:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+/* Image styling */
+.course_head img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Content area */
+.course_content-1,
+.course_content-2,
+.course_content-3 {
+  padding: 25px;
+}
+
+/* Header text */
+.single_course h4 a {
+  color: #002347;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.single_course h4 a:hover {
+  color: #29b41c;
+}
+
+/* Paragraph */
+.single_course p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Explore More Button */
+.tag {
+  background: #29b41c;
+  color: white;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.tag:hover {
+  background: #1f8a17;
+  color: white;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .single_course {
+    margin-bottom: 25px;
+  }
+}
 
 
 </style>
+<style>
+/* Make all course cards equal height */
+.single_course {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-        <div class="row">
+/* Make content area flexible */
+.course_content-1,
+.course_content-2,
+.course_content-3 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push Explore button to bottom */
+.expo {
+  margin-top: auto;   /* Pushes button to bottom */
+  padding-top: 20px;
+}
+
+/* Center align button (optional) */
+.expo a {
+  width: 100%;
+  display: inline-block;
+}
+
+
+</style>
+<style>
+          
+          .tag{
+          display: flex;
+          text-align: center;
+          }
+          
+        </style>
+        <style>
+          .tag {
+    display: flex !important;
+    justify-content: center;   /* horizontal center */
+    align-items: center;        /* vertical center */
+}
+
+        </style>
+        <style>
+          .tag {
+    background: #29b41c;
+    color: white;
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex !important;
+    justify-content: center; 
+    align-items: center;      
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    width: 100%;   /* optional if you want full width */
+}
+
+        </style>
+
+
+        
           <!-- single course -->
-          <div class="col-lg-12">
-            <div class="owl-carousel active_course">
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c1.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <!--<span class="price">$25</span>-->
-                 <!-- <span class="tag mb-4 d-inline-block">design</span>-->
-                  <h4 class="mb-3">
-                    <a href="course-details.html">Public Speaking Workshop</a>
-                  </h4>
-                  <p>
-                    Our one-day Business Skills Workshop is specially designed for new 
-                    entrepreneurs and business owners who want to strengthen their professional 
-                    abilities.
-                  </p><br>
-                <a href="course1.html"> <span class="tag mb-4 d-inline-block">Explore more</span></a>
+          <div class="row">
 
-                  <!--<div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author1.png" alt="" />
-                      <span class="d-inline-block ml-2">Cameron</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>-->
-                </div>
-              </div>
-
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c2.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <!--<span class="price">$25</span>
-                  <span class="tag mb-4 d-inline-block">design</span>-->
-                  <h4 class="mb-3">
-                    <a href="course-details.html">Personality Development Workshop</a>
-                  </h4>
-                  <p>
-                   Our one-day Personality Development Workshop is designed to help 
-                   students, job seekers, working professionals, and entrepreneurs
-                    unlock their true potential
-                  </p>
-               <a href="course2.html"><span class="tag mb-4 d-inline-block">Explore more</span></a>
-
-                  <!--<div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author2.png" alt="" />
-                      <span class="d-inline-block ml-2">Cameron</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>-->
-                </div>
-              </div>
-
-              <div class="single_course">
-                <div class="course_head">
-                  <img class="img-fluid" src="img/courses/c3.jpg" alt="" />
-                </div>
-                <div class="course_content">
-                  <!--<span class="price">$25</span>
-                  <span class="tag mb-4 d-inline-block">design</span>-->
-                  <h4 class="mb-3">
-                    <a href="course-details.html">Business Skills Workshop</a>
-                  </h4>
-                  <p>
-                   This one-day Public Speaking Workshop helps individuals overcome 
-                   stage fear and speak with clarity and confidence. Designed for s
-                   tudents, job seekers, professionals, and entrepreneurs, the workshop
-                    follows a highly interactive,
-                  </p>
-                 <a href="course3.html"> <span class="tag mb-4 d-inline-block">Explore more</span></a>
-
-                  <!--<div
-                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
-                  >
-                    <div class="authr_meta">
-                      <img src="img/courses/author3.png" alt="" />
-                      <span class="d-inline-block ml-2">Cameron</span>
-                    </div>
-                    <div class="mt-lg-0 mt-3">
-                      <span class="meta_info mr-4">
-                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
-                      </span>
-                      <span class="meta_info"
-                        ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
-                      >
-                    </div>
-                  </div>-->
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Course 1 -->
+  <div class="col-lg-4 col-md-6">
+    <div class="single_course">
+      <div class="course_head">
+        <img class="img-fluid" src="img/courses/c1.jpg" alt="" />
+      </div>
+      <div class="course_content-1">
+        <h4 class="mb-3">
+          
+          <a href="course-details.html">Public Speaking Workshop</a>
+        </h4>
+        <p>
+          Our one-day Business Skills Workshop is specially designed for new
+          entrepreneurs and business owners who want to strengthen their
+          professional abilities.
+        </p>
+        
+        <div class="expo">
+        <a href="course1.html">
+          <span class="tag mb-4 d-inline-block">Explore more</span>
+        </a>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Course 2 -->
+  <div class="col-lg-4 col-md-6">
+    <div class="single_course">
+      <div class="course_head">
+        <img class="img-fluid" src="img/courses/c2.jpg" alt="" />
+      </div>
+      <div class="course_content-2">
+        <h4 class="mb-3">
+         
+          <a href="course-details.html">Personality Development Workshop</a>
+        </h4>
+        <p>
+          Our one-day Personality Development Workshop is designed to help
+          students, job seekers, working professionals, and entrepreneurs
+          unlock their true potential.
+        </p>
+        <div class="expo">
+        <a href="course2.html">
+          <span class="tag mb-4 d-inline-block">Explore more</span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course 3 -->
+  <div class="col-lg-4 col-md-6">
+    <div class="single_course">
+      <div class="course_head">
+        <img class="img-fluid" src="img/courses/c3.jpg" alt="" />
+      </div>
+      <div class="course_content-3">
+        <h4 class="mb-3">
+          <a href="course-details.html">Business Skills Workshop</a>
+        </h4>
+        <p>
+          This one-day Public Speaking Workshop helps individuals overcome
+          stage fear and speak with clarity and confidence. Designed for
+          students, job seekers, professionals, and entrepreneurs.
+        </p>
+        <div class="expo">
+        <a href="course3.html">
+          <span class="tag mb-4 d-inline-block">Explore more</span>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
     </div>
     <!--================ End Popular Courses Area =================-->
 
@@ -542,7 +698,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           </div>
         </div>
       </div>
-    </footer>
+    </footer>-->
     <!--================ End footer Area  =================-->
 
     <!-- Optional JavaScript -->
@@ -559,5 +715,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/theme.js"></script>
+    <script>
+    $(document).ready(function () {
+      $("header").load("header.html", function () {
+        // After header is loaded, get current file name
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Loop through nav links to set active class
+        $('#header .nav-link').each(function () {
+          const linkPage = $(this).attr('href');
+          if (linkPage === currentPage) {
+            $(this).closest('.nav-item').addClass('active');
+          }
+        });
+      });
+    });
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
   </body>
 </html>
