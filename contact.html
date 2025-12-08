@@ -161,7 +161,7 @@
     </section>
     <style>
       .contact-info-bar-wrapper {
-        background-color: #1283c4;
+       background-color:   #002347;
         padding: 10px 0;
       }
 
@@ -217,10 +217,10 @@
   /* Icon styling */
   #contact .section-title h2 {
     text-align: center;
-    color: rgb(65, 46, 240) !important;
+    color:  #002347;
   }
   #contact .info-item i {
-    color: rgb(65, 46, 240) !important;
+    color:  #002347;
     font-size: 30px;
     margin-right: 12px;
   }
@@ -230,7 +230,7 @@
   #contact .info-item a,
   #contact .info-item p,
   #contact .info-item span {
-    color: rgb(40, 101, 231) !important;
+    color: #002347;
     margin: 0;
   }
 </style>
@@ -406,7 +406,7 @@
     <!--================ End footer Area  =================-->
 
     <!--================Contact Success and Error message Area =================-->
-    <div id="success" class="modal modal-message fade" role="dialog">
+    <!--<div id="success" class="modal modal-message fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -423,11 +423,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <!-- Modals error -->
 
-    <div id="error" class="modal modal-message fade" role="dialog">
+    <!--<div id="error" class="modal modal-message fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -444,7 +444,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
     <!--================End Contact Success and Error message Area =================-->
 
     <!-- Optional JavaScript -->
@@ -466,10 +466,23 @@
     <script src="js/theme.js"></script>
     <div id="footer"></div>
 <script>
-  
+    $(document).ready(function () {
+      $("header").load("header.html", function () {
+        // After header is loaded, get current file name
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Loop through nav links to set active class
+        $('#header .nav-link').each(function () {
+          const linkPage = $(this).attr('href');
+          if (linkPage === currentPage) {
+            $(this).closest('.nav-item').addClass('active');
+          }
+        });
+      });
+    });
     fetch("footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
   </body>
 </html>
