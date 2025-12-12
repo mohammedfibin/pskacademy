@@ -181,6 +181,9 @@ button:focus {
         padding: 0px;
         display: inline-block; }
         @media (max-width: 991px) {
+          .header_area .navbar {
+        background:#0d1349!important;
+    }
           .header_area .navbar .nav .nav-item .nav-link {
             color: #ffffff; } }
         .header_area .navbar .nav .nav-item .nav-link:after {
